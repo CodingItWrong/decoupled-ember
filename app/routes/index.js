@@ -5,6 +5,7 @@ export default class IndexRoute extends Route {
   @service todos;
 
   model() {
-    return this.todos.loadAll();
+    this.todos.loadAll();
+    return this.todos.all;
   }
 }

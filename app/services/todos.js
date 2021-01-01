@@ -1,11 +1,12 @@
 import Service from '@ember/service';
+import {A} from '@ember/array';
 import {tracked} from '@glimmer/tracking';
 import Todos from 'decoupled-frontend/lib/todos';
 import axios from 'axios';
 import RestTodosClient from 'decoupled-frontend/lib/todos/client/rest';
 
 export default class TodosService extends Service {
-  @tracked records = [];
+  @tracked records = A([]);
 
   constructor() {
     super();
@@ -16,8 +17,7 @@ export default class TodosService extends Service {
 
   async loadAll() {
     await this.todos.loadAll();
-    this.records = this.todos.all;
-    return this.records;
+    this.records.setObjects(this.todos.all);
   }
 
   get all() {
