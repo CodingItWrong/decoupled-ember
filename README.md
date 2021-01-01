@@ -1,58 +1,14 @@
-# decoupled-frontend
+# Decoupled Ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An attempt to create a decoupled architecture for frontend apps.
 
-## Prerequisites
+This is the Ember version. It includes:
 
-You will need the following things properly installed on your computer.
+- A Vanilla JS data layer, including in-memory persistence and API client
+- Ember for the UI library
+- Lightweight bindings between Ember and the data layer with a service
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+A full-featured decoupled app would also have:
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd decoupled-frontend`
-* `yarn install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- A CSS-only styling library, to decouple it from the UI library
+- Cypress for E2E tests, to decouple those from the UI library
